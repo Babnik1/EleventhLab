@@ -1,0 +1,14 @@
+<map id="src/dataManager/data_manager.h" name="src/dataManager/data_manager.h">
+<area shape="rect" id="Node000001" title="Работа с данными." alt="" coords="41,5,189,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="16,168,83,193"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,49,35,68,12,95,8,110,11,125,29,155,24,157,6,127,3,110,7,93,31,64,62,44"/>
+<area shape="rect" id="Node000003" href="$rc_8h.html" title=" " alt="" coords="22,94,64,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="99,48,66,84,62,80,95,45"/>
+<area shape="rect" id="Node000004" href="$fwd_8h.html" title="Форвадная декларация." alt="" coords="89,94,141,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="118,46,118,78,112,78,112,46"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="165,94,211,120"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="135,45,169,81,165,84,131,48"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="236,94,346,120"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="160,44,251,85,249,90,158,49"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="106,122,73,158,69,154,102,118"/>
+</map>

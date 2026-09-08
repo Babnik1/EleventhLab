@@ -1,0 +1,13 @@
+<map id="src/dataManager/data_manager.h" name="src/dataManager/data_manager.h">
+<area shape="rect" id="Node000001" title="Работа с данными." alt="" coords="46,5,193,46"/>
+<area shape="rect" id="Node000002" href="$handler_8h.html" title="Обработчик команд." alt="" coords="49,94,190,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,62,122,93,117,93,117,62"/>
+<area shape="rect" id="Node000003" href="$server_8h.html" title="Класс TCP сервера. Реализация." alt="" coords="5,241,135,267"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="108,135,94,169,75,242,70,240,89,167,104,133"/>
+<area shape="rect" id="Node000005" href="$session_8h.html" title="Сетевая сессия. Объявление." alt="" coords="104,168,242,193"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="139,130,166,166,162,169,135,134"/>
+<area shape="rect" id="Node000004" href="$session_8cpp.html" title=" " alt="" coords="44,315,197,341"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="89,278,114,313,110,316,85,281"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="145,204,89,243,86,239,142,200"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="168,209,150,268,129,315,124,313,145,266,163,207"/>
+</map>

@@ -1,0 +1,16 @@
+<map id="src/rc.h" name="src/rc.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="102,5,166,31"/>
+<area shape="rect" id="Node000002" href="$data__manager_8h.html" title="Работа с данными." alt="" coords="5,79,153,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,45,95,80,90,77,115,42"/>
+<area shape="rect" id="Node000003" href="$handler_8h.html" title="Обработчик команд." alt="" coords="63,168,204,193"/>
+<area shape="poly" id="edge8_Node000001_Node000003" title=" " alt="" coords="152,43,167,78,170,99,167,120,157,147,144,168,140,166,152,145,162,119,165,99,162,80,147,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="103,131,127,166,123,169,99,134"/>
+<area shape="rect" id="Node000004" href="$server_8h.html" title="Класс TCP сервера. Реализация." alt="" coords="20,315,149,341"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="123,208,108,242,89,315,84,314,103,240,118,206"/>
+<area shape="rect" id="Node000006" href="$session_8h.html" title="Сетевая сессия. Объявление." alt="" coords="118,241,256,267"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="154,204,180,239,176,242,149,207"/>
+<area shape="rect" id="Node000005" href="$session_8cpp.html" title=" " alt="" coords="59,389,211,414"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="104,352,129,387,124,390,99,355"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="159,278,103,317,100,312,156,274"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="183,282,164,342,143,389,139,387,159,340,178,281"/>
+</map>
