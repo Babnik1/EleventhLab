@@ -25,7 +25,7 @@ static const std::unordered_map< std::string, Actions > commands =
 };
 
 /// @brief Код ошибки в сообщение клиенту.
-std::string CodeToString( ReturnCodes rc )
+std::string CodeToString( ReturnCodes rc, int id = 0 )
 {
     switch ( rc )
     {
@@ -39,7 +39,7 @@ std::string CodeToString( ReturnCodes rc )
             return "ERR table not exists\n";
 
         case ReturnCodes::RecordAlreadyExists:
-            return "ERR duplicate\n";
+            return std::string( "ERR duplicate " ) + std::to_string( id ) + "\n";
 
         default:
             return "ERROR Internal error\n";
@@ -91,6 +91,7 @@ std::string Handler::HandleCommand( const std::string& command )
         return CodeToString( ReturnCodes::InvalidCommand );
     }
     ReturnCodes rc = ReturnCodes::InvalidCommand;
+    int id = 0;
 
     switch ( it->second )
     {
@@ -101,7 +102,6 @@ std::string Handler::HandleCommand( const std::string& command )
                 std::cout << "Arguments is empty\n";
                 return CodeToString( ReturnCodes::InvalidCommand );
             }
-            int id = 0;
             std::string table;
             std::string name;
 
@@ -172,5 +172,5 @@ std::string Handler::HandleCommand( const std::string& command )
         }
     }
     
-    return CodeToString( rc );
+    return CodeToString( rc, id );
 }

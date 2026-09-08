@@ -11,6 +11,7 @@
 #include <boost/asio/impl/write.hpp>
 #include <boost/system/detail/error_code.hpp>
 #include <memory>
+#include <iostream>
 
 
 Session::Session( SessionId id,
@@ -55,7 +56,7 @@ void Session::Read()
 
     boost::asio::async_read_until( 
         socket_,
-        *buffer,
+        buffer_,
         '\n',
         [ this, buffer ]( const boost::system::error_code& ec, std::size_t )
         {
@@ -65,14 +66,22 @@ void Session::Read()
                 return;
             }
 
-            std::istream is( buffer.get() );
+            std::istream is( &buffer_ );
             std::string command;
-            std::getline( is, command );
-
-            std::string response = handler_->HandleCommand( command );
-            if ( !response.empty() )
+            while ( std::getline( is, command ) )
             {
-                Send( response );
+                if ( !command.empty() && command.back() == '\r' )
+                {
+                    command.pop_back();
+                }
+
+                if ( command.empty() ) continue;
+
+                std::string response = handler_->HandleCommand( command );
+                if ( !response.empty() )
+                {
+                    Send( response );
+                }
             }
             Read();
         } 
@@ -103,18 +112,17 @@ void Session::DoWrite()
 
 void Session::Disconnect()
 {
-    // boost::system::error_code ec;
-    // ec = socket_.shutdown( boost::asio::ip::tcp::socket::shutdown_both,ec );
-    // if ( ec )
-    // {
-    //     ERROR_ALL( "Failed to close socket for session: " << id_ );
-    // }
-    // ec = socket_.close( ec );
-    // if ( ec )
-    // {
-    //     ERROR_ALL( "Failed to close socket for session: " << id_ );
-    // }
-    // handler_->Disconnect( id_ );
+    boost::system::error_code ec;
+    ec = socket_.shutdown( boost::asio::ip::tcp::socket::shutdown_both,ec );
+    if ( ec )
+    {
+        std::cout << "Failed to close socket for session: " << id_;
+    }
+    ec = socket_.close( ec );
+    if ( ec )
+    {
+        std::cout << "Failed to close socket for session: " << id_;
+    }
 }
 
 void Session::SetSelf( std::weak_ptr< Session > self )
